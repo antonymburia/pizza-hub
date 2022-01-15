@@ -41,7 +41,7 @@
   <div class="all">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-9">
           <!-- home section -->
           <section id="home">
             <div class="landing">
@@ -84,8 +84,8 @@
                           <input type="number" class="form-control" placeholder="0" id="beef" required>
                         </div>
                         <div class="col"> <br>
-                          <input type="button" class="form-control btn-success" value="Add ingredients"
-                            data-toggle="modal" data-target="#">
+                          <input type="button" class="btn btn-success form-control" data-bs-toggle="modal"
+                            data-bs-target="#preferences" value="Add Ingredients">
                         </div>
                       </div>
                     </form>
@@ -103,8 +103,8 @@
                           <input type="number" class="form-control" placeholder="0" id="ammount">
                         </div>
                         <div class="col"> <br>
-                          <input type="button" class="form-control btn-success" value="Add ingredients"
-                            onsubmit="checkvalue()">
+                          <input type="button" class="btn btn-success form-control" data-bs-toggle="modal"
+                            data-bs-target="#preferences" value="Add Ingredients">
                         </div>
                       </div>
                     </form>
@@ -114,13 +114,72 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        hi
+        <div class="col-sm-3">
+          hi
+        </div>
       </div>
     </div>
 
   </div>
+  </div>
+  <!-- modal content -->
+  <!-- Modal -->
+  <div class="modal" id="preferences">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Select your preference</h4>
+          <input type="button" md class="btn-close" data-bs-dismiss="modal">
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form id="pizza-opt">
+            <div class="row">
+              <div class="col">
+                <label for="size">Size</label> <br>
+                <select id="size" class="form-select">
+                  <option value="1000" data-cost="1000">Large KSH 1000</option>
+                  <option value="800" data-cost="800">Medium KSH 800</option>
+                  <option value="600" data-cost="600">Small KSH 600</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="Crust">Crust </label> <br>
+                <select id="crust" class="form-select">
+                  <option value="150" data-cost="150">Flat bread crust KSH 150</option>
+                  <option value="200" data-cost="200">Crispy KSH 200</option>
+                  <option value="150" data-cost="150">Gluten Free KSH 150</option>
+                  <option value="230" data-cost="230">Stuffed KSH 230</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="toppings">Toppings</label> <br>
+                <select id="toppings" class="form-select">
+                  <option value="90" data-cost="90">Spinach KSH 90</option>
+                  <option value="100" data-cost="100">Extra Cheese KSH 100</option>
+                  <option value="70" data-cost="70">Onion KSH 70</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div>
+            <input type="button" class="btn btn-success" data-bs-dismiss="modal" value="Add to cart" onsubmit="order()"
+              id="getvalue">
+          </div>
+          <div>
+            <input type="button" class="btn btn-danger" data-bs-dismiss="modal" value="close">
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </body>
 
