@@ -15,11 +15,15 @@
   background-repeat: no-repeat;
   background-position: top center;
 }
+.menu h1{
+  text-align: center;
+}
 .mnu-list{
   background-color: #fff;
   padding: 2%;
   margin: 2%;
   text-align: center;
+  font-weight: 800.;
 }
 .mnu-list img{
 width: 80%;
