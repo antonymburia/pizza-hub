@@ -12,5 +12,8 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
-
+}
+.mnu-list img{
+width: 80%;
+align-content: center;
 }
