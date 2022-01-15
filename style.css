@@ -1,3 +1,16 @@
+.all{
+  background-color: #eee;
+}
 .landing{
-  
+  padding-top: 10%;
+  padding-left: 2%;
+  margin: 2%;
+  background-color: #fff;
+  background-image: url("images/pizza-6125980_1920.png");
+  background-size: 75% ;
+  height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+
 }
