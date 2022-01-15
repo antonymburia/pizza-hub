@@ -58,15 +58,15 @@
                 <div class="mnu-list">
                   <img src="images/american-1239080_1920-removebg-preview (1).png" alt=""> <br>
                   <div class="select">
-                    <form>
+                    <form id="first">
                       <div class="row">
                         <div class="col">
-                          <label for="ammount"> Ammount</label> <br>
-                          <input type="number" class="form-control" placeholder="0" id="ammount">
+                          <label for="ammount"> quantity</label> <br>
+                          <input type="number" class="form-control" placeholder="0" id="ammount" required>
                         </div>
                         <div class="col"> <br>
-                          <input type="button" class="btn btn-success form-control" data-bs-toggle="modal"
-                            data-bs-target="#preferences" value="Add Ingredients">
+                          <button type="button" class="btn btn-success form-control" data-bs-toggle="modal"
+                          data-bs-target="#preferences" onclick="getamt()">Add Ingredients</button>
                         </div>
                       </div>
                     </form>
@@ -77,15 +77,15 @@
                 <div class="mnu-list">
                   <img src="images/american-1239080_1920-removebg-preview (1).png" alt=""><br>
                   <div class="select">
-                    <form>
+                    <form id="2nd">
                       <div class="row">
                         <div class="col">
-                          <label for="ammount"> Ammount</label> <br>
-                          <input type="number" class="form-control" placeholder="0" id="beef" required>
+                          <label for="ammount"> quantity</label> <br>
+                          <input type="number" class="form-control" placeholder="0" id="num" required>
                         </div>
                         <div class="col"> <br>
-                          <input type="button" class="btn btn-success form-control" data-bs-toggle="modal"
-                            data-bs-target="#preferences" value="Add Ingredients">
+                          <button type="button" class="btn btn-success form-control" data-bs-toggle="modal"
+                          data-bs-target="#preferences" onclick="getamt()">Add Ingredients</button>
                         </div>
                       </div>
                     </form>
@@ -96,15 +96,15 @@
                 <div class="mnu-list">
                   <img src="images/american-1239080_1920-removebg-preview (1).png" alt=""><br>
                   <div class="select">
-                    <form>
+                    <form id="3rd">
                       <div class="row">
                         <div class="col">
-                          <label for="ammount"> Ammount</label> <br>
-                          <input type="number" class="form-control" placeholder="0" id="ammount">
+                          <label for="ammount"> quantity</label> <br>
+                          <input type="number" class="form-control" placeholder="0" id="qty" defaul>
                         </div>
                         <div class="col"> <br>
-                          <input type="button" class="btn btn-success form-control" data-bs-toggle="modal"
-                            data-bs-target="#preferences" value="Add Ingredients">
+                          <button type="button" class="btn btn-success form-control" data-bs-toggle="modal"
+                          data-bs-target="#preferences" onclick="getamt()">Add Ingredients</button>
                         </div>
                       </div>
                     </form>
@@ -115,7 +115,9 @@
           </div>
         </div>
         <div class="col-sm-3">
-          hi
+          <div id="cart">
+            <h2>hi</h2>
+          </div>
         </div>
       </div>
     </div>
