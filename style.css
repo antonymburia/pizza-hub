@@ -4,6 +4,7 @@
 .landing{
   padding-top: 10%;
   padding-left: 2%;
+  padding-right: 2%;
   margin: 2%;
   background-color: #fff;
   background-image: url("images/pizza-6125980_1920.png");
@@ -13,7 +14,12 @@
   background-repeat: no-repeat;
   background-position: top center;
 }
+.mnu-list{
+  background-color: #fff;
+  padding: 2%;
+  margin: 2%;
+  text-align: center;
+}
 .mnu-list img{
 width: 80%;
-align-content: center;
 }
