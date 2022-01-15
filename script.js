@@ -5,3 +5,4 @@ function customerorder(amount, size, crust, toppings,totalprice) {
   this.toppings = toppings;
   this.totalprice = totalprice
 }
+$(document).ready
