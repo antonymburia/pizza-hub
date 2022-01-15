@@ -34,6 +34,8 @@ $(document).ready(function(){
     var inputtoppings = parseInt($("#toppings").val());
     var totalprice = inputamt * inputsize + inputcrust + inputtoppings; 
 
+    // clear form data after submission
+
     const neworder = new customerorder(inputamt, inputsize, inputcrust, inputtoppings, totalprice);
     
     $("#cart").append("<li>" + neworder.totalprice + "</li>");
