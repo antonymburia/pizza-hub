@@ -1,5 +1,6 @@
 .all{
   background-color: #eee;
+  background-image: url('images/meal-2834549.jpg') ;
 }
 .landing{
   padding-top: 10%;
@@ -7,13 +8,16 @@
   padding-right: 2%;
   margin: 2%;
   margin-top: 0;
-  background-color: #fff;
+  margin-right: 0;
+  background-color: rgb(0,0,0,0.5);
   background-image: url("images/pizza-6125980_1920.png");
   background-size: 75% ;
   height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
+  color: #fc5;
+  border-radius: 0 0 20px 20px;
 }
 .menu h1{
   text-align: center;
@@ -27,4 +31,31 @@
 }
 .mnu-list img{
 width: 80%;
+}
+#cart img{
+  width: 100%;
+}
+.customreceipt{
+  background-image: url('images/animal-g8123cbc5f_1920.png');
+  background-size: cover;
+  background-position: top center;
+  margin-right: 0%;
+  padding: 1%;
+  padding-top: 0;
+}
+.receipt{
+  background-color: rgb(255,255,255,0.7);
+  padding: 3%;
+  padding-top: 0;
+}
+.receipt h2{
+  box-shadow: 0px 5px 5px 0px;
+}
+.customreceipt h2{
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  padding: 2%;
+  
+  
 }
