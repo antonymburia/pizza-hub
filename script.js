@@ -20,14 +20,18 @@ function getamt() {
 }
 
 
-
-function customerorder(ammount, size, crust, toppings,totalprice) {
+// order constructor
+function customerorder(ammount, size, crust, toppings) {
   this.ammount = ammount;
   this.size = size;
   this.crust = crust;
   this.toppings = toppings;
-  this.totalprice = totalprice
+  this.totals = [];
 }
+function totalprice(total) {
+  this.total = total;
+}
+
 
 $(document).ready(function(){
   $("#getvalue").click(function() {
@@ -39,9 +43,12 @@ $(document).ready(function(){
     var pizzasize = $( "#size option:selected" ).text();
     var pizzacrust = $( "#crust option:selected" ).text();
     var pizzatoppings = $( "#toppings option:selected" ).text();
-    var pizzaamt = $( "#toppings option:selected" ).text();
+    var pizzaamt = selectedpizza[0];
     var pizzaname = selectedpizza[1]
-    var totalprice = inputamt * inputsize + inputcrust + inputtoppings; 
+    var total = inputamt * inputsize + inputcrust + inputtoppings; 
+
+    
+ 
  
     // clear form data after submission
     if (inputamt > 0) {
@@ -51,9 +58,22 @@ $(document).ready(function(){
     }
 
 
-    const neworder = new customerorder(inputamt, inputsize, inputcrust, inputtoppings, totalprice);
+    const neworder = new customerorder(inputamt, inputsize, inputcrust, inputtoppings, total);
+    var newtotal = new totalprice(total);
+    neworder.totals.push(total);
+
     
-    $("#cart").append("<ul><li>" + neworder.totalprice + "</li></ul>" + pizzasize);
+    
+    // display receipt
+    $("#cart").append(pizzaamt + " " + pizzaname + " " + pizzasize + "</br>" + 
+    pizzacrust + "</br>"+ 
+    pizzatoppings + "</br>" +
+    "<li>" + neworder.totals + "</li>" + "</br>" 
+    );
+    $("#cart li").hide();
+
+    $("#total").text("Total cost: " + totalsum);
+   
   });
 
 });
