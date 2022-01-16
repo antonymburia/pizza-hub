@@ -94,7 +94,10 @@ $(document).ready(function(){
     // calculate totalcost + delivery
     $("#checkout").click(function(){
       var totaldeliverycost = parseInt($("#delivery").val()) + totalsum;
-    alert("your order will be delivered at " + $( "#delivery option:selected" ).text() + " the total cost is: " + totaldeliverycost);
+    $("#message").text("your order will be delivered at " + $( "#delivery option:selected" ).text() + " the total cost is: " + totaldeliverycost);
+    $('#reload').click(function() {
+      location.reload();
+  });
     });
    
   });
