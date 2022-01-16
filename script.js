@@ -89,7 +89,7 @@ $(document).ready(function(){
     $("#checkout").html('</br><button type="button" class="btn btn-success">Checkout</button>');
     $("#location").hide();
     
-    $("#location").html('<form><select id="delivery"><option value="0"> <b>!! NO LOCATION HAS BEEN SELECTED PICKUP YOUR ORDER AT OUR PICKUP SITE @KSH 0 !! </b> </option><option value="50">Nairobi @:Ksh 50</option><option value="70">Kasarani @:Ksh 70</option><option value="80">Kahawa @:Ksh 80</option></select></form>');
+    $("#location").html('<form><select id="delivery"><option value="0"> <b>!! NO PICKUP @:KSH 0 !! </b> </option><option value="50">Nairobi @:Ksh 50</option><option value="70">Kasarani @:Ksh 70</option><option value="80">Kahawa @:Ksh 80</option></select></form>');
 
     // calculate totalcost + delivery
     $("#checkout").click(function(){
