@@ -14,6 +14,7 @@ function getamt() {
         return [cheese, 'Cheese Pizza'];
       } else {
         alert("enter valid ammount");
+        $("#preferences").modal("hide");
       }
     }
   }
