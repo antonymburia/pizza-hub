@@ -75,12 +75,19 @@ $(document).ready(function(){
     pizzacrust + "</br>"+ 
     pizzatoppings + "</br>" +
     "<li>" + neworder.totals + "</li>" + "</br>" 
+
     );
     $("#cart li").hide();
 
     $("#total").text("Total cost: " + totalsum);
+    $("#getlocation").html('<button id="setlocation" class="choose">Select Location</button>');
+    $("#setlocation").click(function(){
+      $("#location").show();
+    });
     $("#checkout").html('</br><button type="button" class="btn btn-success">Checkout</button>');
-
+    $("#location").hide();
+    
+    $("#location").html('<form><select id="location"><option value="0">pickup KSH 0</option><option value="50">Nairobi Ksh 50</option><option value="70">Kasarani Ksh 70</option><option value="80">Kahawa Ksh 80</option></select></form>');
    
   });
 
