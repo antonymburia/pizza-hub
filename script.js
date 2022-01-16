@@ -45,7 +45,8 @@ $(document).ready(function(){
     var pizzatoppings = $( "#toppings option:selected" ).text();
     var pizzaamt = selectedpizza[0];
     var pizzaname = selectedpizza[1]
-    var total = inputamt * inputsize + inputcrust + inputtoppings; 
+    var total = inputamt * inputsize + inputcrust + inputtoppings;
+
 
     
  
@@ -82,12 +83,18 @@ $(document).ready(function(){
     $("#total").text("Total cost: " + totalsum);
     $("#getlocation").html('<button id="setlocation" class="choose">Select Location</button>');
     $("#setlocation").click(function(){
-      $("#location").show();
+      $("#location").toggle();
     });
     $("#checkout").html('</br><button type="button" class="btn btn-success">Checkout</button>');
     $("#location").hide();
     
-    $("#location").html('<form><select id="location"><option value="0">pickup KSH 0</option><option value="50">Nairobi Ksh 50</option><option value="70">Kasarani Ksh 70</option><option value="80">Kahawa Ksh 80</option></select></form>');
+    $("#location").html('<form><select id="delivery"><option value="0">no delivery cost</option><option value="50">Nairobi @:Ksh 50</option><option value="70">Kasarani @:Ksh 70</option><option value="80">Kahawa @:Ksh 80</option></select></form>');
+
+    // calculate totalcost + delivery
+    $("#checkout").click(function(){
+      var totaldeliverycost = parseInt($("#delivery").val()) + totalsum;
+    alert("your order will be delivered at " + $( "#delivery option:selected" ).text() + " the total cost is: " + totaldeliverycost);
+    });
    
   });
 
