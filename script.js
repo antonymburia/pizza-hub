@@ -63,7 +63,13 @@ $(document).ready(function(){
     neworder.totals.push(total);
 
     
-    
+    var totalsum = 0;
+    // add new totals to tottals array
+    $('#cart li').each(function(){
+      neworder.totals.push(total);
+     });
+
+    $.each(neworder.totals,function(){totalsum += this;});
     // display receipt
     $("#cart").append(pizzaamt + " " + pizzaname + " " + pizzasize + "</br>" + 
     pizzacrust + "</br>"+ 
