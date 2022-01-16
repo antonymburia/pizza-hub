@@ -38,8 +38,8 @@ $(document).ready(function(){
     var selectedpizza = getamt();
     var inputamt = selectedpizza[0];
     var inputsize = parseInt($("#size").val());
-    var inputcrust= parseInt($("#crust").val());
-    var inputtoppings = parseInt($("#toppings").val());
+    var inputcrust= parseInt($("#crust").val()) * selectedpizza[0];
+    var inputtoppings = parseInt($("#toppings").val()) * selectedpizza[0];
     var pizzasize = $( "#size option:selected" ).text();
     var pizzacrust = $( "#crust option:selected" ).text();
     var pizzatoppings = $( "#toppings option:selected" ).text();
@@ -79,6 +79,8 @@ $(document).ready(function(){
     $("#cart li").hide();
 
     $("#total").text("Total cost: " + totalsum);
+    $("#checkout").html('</br><button type="button" class="btn btn-success">Checkout</button>');
+
    
   });
 
