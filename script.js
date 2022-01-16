@@ -86,7 +86,7 @@ $(document).ready(function(){
     $("#setlocation").click(function(){
       $("#location").toggle();
     });
-    $("#checkout").html('</br><button type="button" class="btn btn-success">Checkout</button>');
+    $("#checkout").html('</br><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Checkout</button>');
     $("#location").hide();
     
     $("#location").html('<form><select id="delivery"><option value="0"> <b>!! NO PICKUP @:KSH 0 !! </b> </option><option value="50">Nairobi @:Ksh 50</option><option value="70">Kasarani @:Ksh 70</option><option value="80">Kahawa @:Ksh 80</option></select></form>');
