@@ -1,4 +1,4 @@
-# Portfolio
+# Pizza Hub
 #### Author Antony Mburia
 ## Description
 This is a Javascript web app where users can order Pizza
