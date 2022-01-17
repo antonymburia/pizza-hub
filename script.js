@@ -74,8 +74,8 @@ $(document).ready(function(){
     $.each(neworder.totals,function(){totalsum += this;});
     // display receipt
     $("#cart").append(pizzaamt + " " + pizzaname + " " + pizzasize + "</br>" + 
-    pizzacrust + "</br>"+ 
-    pizzatoppings + "</br>" +
+    pizzaamt + pizzacrust + "</br>"+ 
+    pizzaamt + pizzatoppings + "</br>" +
     "<li>" + neworder.totals + "</li>" + "</br>" 
 
     );
